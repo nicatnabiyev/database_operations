@@ -101,7 +101,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,
         return success
     }
 
-    /** get all count */
+    /** delete by id*/
     fun deleteCar(id:Int):Int{
         val db = this.writableDatabase
         val success = db.delete(TABLE_NAME, "id=$id",null)
@@ -109,7 +109,7 @@ class DatabaseHandler(context: Context): SQLiteOpenHelper(context,DATABASE_NAME,
         return success
     }
 
-    /** delete by id*/
+    /** get all count */
     fun getAllCarsCount():Int{
         return getCars().size
     }
